@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Eva Deng - Home</title>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="assignments/" class="svg-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" class="svg-logo">
+          <title>Eva Deng's web design projects</title>
+          <defs>
+            <mask id="knockout-mask">
+              <rect width="100" height="100" fill="white"/>
+              <text x="50" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="black">ED</text>
+            </mask>
+          </defs>
+          <circle cx="50" cy="50" r="45" mask="url(#knockout-mask)" />
+        </svg>
+      </a>
+    </div>
+    
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" title="Go to Home Page">Home</a></li>
+        <li><a href="about.html" title="Learn more about me">About</a></li>
+        <li><a href="interests.html" title="See my interests">Interests</a></li>
+        <li><a href="raster-graphics.html" title="Raster Graphics Assignment">Raster Graphics</a></li>
+        <li><a href="vector-graphics.html" title="Vector Graphics Assignment">Vector Graphics</a></li>
+        <li><a href="assignments/" title="All Assignments">Assignments</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <img src="sea.jpg" alt="Sea" width="500" height="300" class="main-image">
+
+    <section id="intro" class="card">
+      <h2>Introduction</h2>
+      <p>Hi, I'm Eva Deng, and I created this website to share a bit about myself and showcase my web design projects.</p>
+    </section>
+
+    <section id="learnmore" class="card">
+      <h2>Learn More</h2>
+      <p>Feel free to take a look at my university website if you'd like to learn more about where I spend most my time :) 
+        <a href="https://www.nyu.edu/" target="_blank">Visit NYU</a>
+      </p>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>About Me</h3>
+          <p>Learn about my background and experiences</p>
+          <a href="about.html" class="btn">View Page</a>
+        </div>
+        <div class="project-card">
+          <h3>My Interests</h3>
+          <p>Discover my hobbies and future goals</p>
+          <a href="interests.html" class="btn">View Page</a>
+        </div>
+        <div class="project-card">
+          <h3>Raster Graphics</h3>
+          <p>Image optimization and composition project</p>
+          <a href="raster-graphics.html" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Vector Graphics</h3>
+          <p>SVG logo design and implementation</p>
+          <a href="vector-graphics.html" class="btn">View Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eva Deng | Creative Commons Zero v1.0 Universal</p>
+  </footer>
+</body>
+</html>
