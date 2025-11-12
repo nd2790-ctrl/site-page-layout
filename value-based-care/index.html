@@ -1,115 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Value-Based Care: The Future of Healthcare</title>
-    <link rel="stylesheet" href="value-based-care-style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Value-Based Care in Modern Healthcare Systems</title>
+  <meta name="description" content="Transforming healthcare from volume to value — an overview of value-based care approaches in the US and the UK.">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="logo-container">
-            <a href="../assignments/" class="svg-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="80" height="80">
-                    <title>Healthcare Systems Research</title>
-                    <defs>
-                        <mask id="knockout-mask">
-                            <rect width="100" height="100" fill="white"/>
-                            <text x="50" y="65" text-anchor="middle" font-family="Arial" font-size="50" font-weight="bold" fill="black">HC</text>
-                        </mask>
-                    </defs>
-                    <circle cx="50" cy="50" r="45" mask="url(#knockout-mask)" />
-                </svg>
-            </a>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="comparison.html">US vs UK</a></li>
-                <li><a href="solutions.html">Solutions</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="logo" href="index.html">Value-Based Care</a>
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="grid-container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Value-Based Care in Modern Healthcare Systems</h1>
-                <p class="hero-subtitle">Transforming healthcare from volume to value for sustainable, equitable care delivery</p>
-            </div>
-            <div class="hero-image">
-                <img src="images/healthcare-hero.jpg" alt="Modern healthcare professionals collaborating" width="600" height="400">
-            </div>
-        </section>
+  <main class="page-grid" id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <img src="images/hero.jpg" alt="Healthcare team discussing patient records" class="hero-img">
+      <div class="hero-content">
+        <h1 id="hero-heading">Transforming healthcare from volume to value</h1>
+        <p class="lede">Modern healthcare must prioritise patient outcomes, prevention, and equity to reduce costs while improving lives.</p>
+      </div>
+    </section>
 
-        <section class="content-section">
-            <div class="text-content">
-                <h2>The Challenge of Modern Healthcare</h2>
-                <p>Modern health systems face a fundamental conflict. As medical technologies advance and populations live longer, the cost of sustaining these systems also rises. Yet more spending does not necessarily equate to better health outcomes. Around the world, health systems are figuring out how to deliver quality care while ensuring it is both equitably and financially reasonable.</p>
-                
-                <p>This is where value-based care (VBC) steps in. VBC offers a potential solution to the profit-driven and uncoordinated health system we all know and disapprove of. Rather than rewarding the volume of services provided, VBC prioritizes the quality and outcomes of care while emphasizing the importance of prevention, patient satisfaction, coordination between teams, and long-term health improvements.</p>
-                
-                <blockquote>
-                    "Value in health care is the measured improvement in a patient's health outcomes for the cost of achieving that improvement."
-                    <cite>— Michael E. Porter and Thomas H. Lee, New England Journal of Medicine</cite>
-                </blockquote>
-                
-                <p>In other words, the end goal of VBC is to promote both efficiency and equity; all while achieving better health with fewer resources.</p>
-            </div>
-            
-            <aside class="sidebar">
-                <div class="stat-card">
-                    <h3>US Healthcare Spending</h3>
-                    <div class="stat-number">$4.9T</div>
-                    <p>Total healthcare expenditure in 2023</p>
-                    <div class="stat-source">Centers for Medicare & Medicaid Services</div>
-                </div>
-                
-                <div class="stat-card">
-                    <h3>UK Healthcare Spending</h3>
-                    <div class="stat-number">£317B</div>
-                    <p>Estimated total expenditure in 2024</p>
-                    <div class="stat-source">Office for National Statistics</div>
-                </div>
-                
-                <div class="key-points">
-                    <h3>Key VBC Principles</h3>
-                    <ul>
-                        <li>Focus on patient outcomes</li>
-                        <li>Prevention over treatment</li>
-                        <li>Coordinated care teams</li>
-                        <li>Efficient resource use</li>
-                        <li>Equitable access</li>
-                    </ul>
-                </div>
-            </aside>
-        </section>
+    <article class="content" aria-labelledby="article-heading">
+      <h2 id="article-heading">Value-Based Care in Modern Healthcare Systems</h2>
+      <div class="multi-col">
+        <p>Modern healthcare faces a critical challenge: costs continue to rise as populations age and medical technologies advance, yet improved spending does not always yield better outcomes. The question is how to deliver quality care that is both equitable and financially sustainable. Value-based care (VBC) offers a solution by shifting focus from the volume of services provided to the value of care achieved.</p>
 
-        <section class="features">
-            <div class="feature-card">
-                <h3>Economic Sustainability</h3>
-                <p>Efficient allocation of finite resources while maintaining quality care delivery across populations.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Social Equity</h3>
-                <p>Ensuring all individuals receive affordable services regardless of background or geography.</p>
-            </div>
-            <div class="feature-card">
-                <h3>Operational Resilience</h3>
-                <p>Building systems that can handle current and future healthcare demands effectively.</p>
-            </div>
-        </section>
-    </main>
+        <p>According to Michael Porter, “Value in health care is the measured improvement in a patient’s outcomes for the cost of achieving that improvement.” Rather than rewarding the number of visits or procedures, VBC emphasizes prevention, coordination, patient satisfaction, and long-term health improvement. It aims to achieve better health outcomes using fewer resources — aligning efficiency with equity.</p>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Healthcare Systems Research. This content is based on academic research by Eva Deng.</p>
-            <nav class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="comparison.html">US vs UK</a>
-                <a href="solutions.html">Solutions</a>
-            </nav>
-        </div>
-    </footer>
+        <p>In the United States, healthcare spending reached $4.9 trillion in 2023, or 17.6% of GDP, yet disparities remain stark. The fee-for-service model incentivizes quantity over quality, and fragmented care pathways lead to inefficiency — with nearly $1 trillion wasted annually. Chronic diseases account for 90% of spending, reflecting a system reactive to illness rather than proactive about health.</p>
+
+        <p>In contrast, the United Kingdom’s NHS spends about 11.1% of GDP, offering universal coverage but struggling with workforce shortages, regional inequalities, and long waiting lists. Despite differences in structure, both systems share common challenges: aging populations, chronic disease burdens, and reactive care models that fail to prevent illness before it occurs.</p>
+
+        <p>Value-based care provides a framework for reform. Key strategies include integrated care teams, standardized outcome measurement, and digital transformation through telehealth and AI diagnostics. Programs like Accountable Care Organizations in the U.S. and the NHS’s Fit for the Future Plan in England demonstrate progress. The latter integrates community-based services, shifts focus from sickness to prevention, and expands digital access — achieving up to 30% fewer emergency visits in pilot regions.</p>
+
+        <p>Ultimately, VBC redefines healthcare success: not by how much care is delivered, but by how effectively it improves lives. Through coordinated systems, preventive focus, and technological innovation, healthcare can move toward a sustainable model that values people over profit.</p>
+      </div>
+    </article>
+
+    <aside class="sidebar" aria-labelledby="sidebar-heading">
+      <h3 id="sidebar-heading">Quick facts</h3>
+      <ul>
+        <li>US health spending: $4.9T (2023)</li>
+        <li>UK NHS spending: ~11.1% of GDP</li>
+        <li>Chronic disease drives 90% of spending</li>
+      </ul>
+
+      <div class="callout" role="note">
+        <h4>Want to explore further?</h4>
+        <p><a href="resources.html">See resources & references</a></p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>© Eva Deng — Value-Based Care project. Images used for educational purposes.</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
+
+
+
