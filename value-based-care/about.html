@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About — Value-Based Care</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Responsive image rule */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Grid + layout tweaks */
+    .page-grid {
+      display: grid;
+      grid-template-columns: 1fr min(70ch, 90%) 1fr;
+    }
+
+    .page-grid > * {
+      grid-column: 2;
+    }
+
+    .multi-col {
+      column-count: 2;
+      column-gap: 2rem;
+    }
+
+    .about-hero {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .content {
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 800px) {
+      .multi-col {
+        column-count: 1;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -13,7 +50,7 @@
       <nav class="site-nav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="about.html" class="active">About</a></li>
           <li><a href="resources.html">Resources</a></li>
         </ul>
       </nav>
@@ -23,47 +60,29 @@
   <main class="page-grid">
     <section class="about-hero">
       <h1>About This Project</h1>
-      <p class="byline">Exploring how healthcare systems can deliver better outcomes by focusing on value rather than volume.</p>
+      <p class="byline">Understanding how healthcare can shift from volume to value for more equitable, sustainable care.</p>
     </section>
 
     <article class="content">
       <h2>Purpose</h2>
       <div class="multi-col">
-        <p>
-          The purpose of this project is to explore how value-based care (VBC) is reshaping modern healthcare delivery. 
-          Instead of rewarding volume, VBC ties compensation to patient outcomes, prevention, and long-term wellness. 
-          This shift represents a philosophical and practical transformation — encouraging healthcare providers to see patients not as individual visits, but as continuous stories of health. 
-          The project aims to make this concept accessible by examining how VBC can build more efficient, compassionate, and equitable systems.
-        </p>
+        <p>The purpose of this website is to introduce the concept of value-based care — an approach that prioritizes patient outcomes over service volume. It serves as an accessible educational platform for anyone interested in understanding how modern healthcare systems are transitioning away from fee-for-service models toward approaches that reward quality, equity, and efficiency. Through concise explanations, visual design, and curated resources, the site highlights the importance of compassion, prevention, and long-term wellness in shaping better patient experiences.</p>
 
-        <p>
-          By comparing the structures of the United States and United Kingdom healthcare systems, the project highlights both the promise and the obstacles of implementing value-based models. 
-          It shows how coordinated, preventive care can improve outcomes while containing costs — and how policy, data, and innovation must align to sustain change. 
-          Ultimately, the goal is to engage readers in understanding that quality care depends on relationships, equity, and the shared pursuit of health, not just clinical performance.
-        </p>
+        <p>In creating this project, I wanted to explore how digital communication can be used to clarify complex healthcare ideas for a broader audience. The site’s structure allows users to easily navigate from introductory explanations to deeper discussions of value-based care frameworks, policy considerations, and real-world examples that demonstrate the impact of value-driven models on both patients and providers.</p>
       </div>
 
-      <h3>Design and Approach</h3>
+      <h2>Design Approach</h2>
       <div class="multi-col">
-        <p>
-          The design of this site reflects the same values that define effective healthcare: clarity, accessibility, and integration. 
-          Each page uses a grid-based structure that adapts seamlessly across screen sizes, ensuring that the experience remains consistent and readable on both mobile and desktop devices. 
-          The layout encourages exploration — guiding visitors from core ideas to supporting data and resources — just as patient-centered care guides individuals through their unique health journeys.
-        </p>
+        <p>The design approach focuses on clarity, accessibility, and visual calm. A minimal colour palette, balanced white space, and readable typography help foreground the content — reflecting the transparency and balance that value-based care strives for in healthcare. The layout employs CSS Grid for consistent structure and Flexbox for responsive alignment, ensuring readability across devices and screen sizes.</p>
 
-        <p>
-          Visually, the color palette and typography were chosen for simplicity and legibility, avoiding distraction while emphasizing structure and trust. 
-          Responsive images and flexible layouts mirror the adaptability healthcare systems must achieve in practice. 
-          Every design choice — from the balanced columns to the structured navigation — reinforces the message that clarity and care go hand in hand. 
-          This combination of academic depth and accessible design creates a space where information feels both authoritative and humane.
-        </p>
+        <p>Images are responsive, accompanied by descriptive alt text for inclusivity, and the site’s hierarchy follows logical semantic structure for assistive technologies. The navigation bar and page layout are designed to create a smooth, uninterrupted user journey, emphasizing simplicity and clarity. Together, these choices reflect the project’s central message: healthcare — and information about it — should be both human-centered and accessible to everyone.</p>
       </div>
     </article>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>© Eva Deng</p>
+      <p>© 2025 Eva Deng — Value-Based Care</p>
     </div>
   </footer>
 </body>
