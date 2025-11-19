@@ -1,4 +1,3 @@
-<!-- FILE: resources.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,11 +10,21 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">Value-Based Care</a>
-      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+
+      <!-- Mobile nav toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <svg width="32" height="32" viewBox="0 0 100 80">
+          <rect width="100" height="12"></rect>
+          <rect y="30" width="100" height="12"></rect>
+          <rect y="60" width="100" height="12"></rect>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
+          <li><a href="resources.html" class="active">Resources</a></li>
         </ul>
       </nav>
     </div>
@@ -24,6 +33,10 @@
   <main class="page-grid">
     <article class="content">
       <h1>References & further reading</h1>
+
+      <!-- DAY OF THE WEEK MESSAGE -->
+      <p id="dayMessage">Today’s message loads here...</p>
+
       <div class="multi-col">
         <ol>
           <li>Porter, M. E. (2010). What is value in health care? NEJM.</li>
@@ -37,11 +50,18 @@
       <img src="images/feature-1.jpg" alt="Doctor with medical technology">
       <img src="images/feature-2.jpg" alt="Doctors discussing patient charts in a hospital meeting room">
 
+      <!-- INTERACTIVE BUTTONS -->
+      <button id="changeTextBtn">Change the Text</button>
+      <p id="textTarget">Click the button above to change this text.</p>
+
+      <button id="colorBtn">Change Box Color</button>
+      <div id="colorBox" class="color-box"></div>
+
     </article>
 
-     <aside class="sidebar">
+    <aside class="sidebar">
       <h3>Download</h3>
-      <p><a href="#">Download site ZIP</a> /Users/evadeng/Desktop/assignment 6/Archive.zip</p>
+      <p><a href="#">Download site ZIP</a></p>
     </aside>
   </main>
 
@@ -50,7 +70,7 @@
       <p>© Eva Deng</p>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
-
----
