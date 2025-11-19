@@ -99,6 +99,13 @@ body {
 /* Accessibility helpers */
 a:focus{outline:3px solid #ffd54f;outline-offset:3px}
 
+/* Make images responsive so they never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Simple print style for submission */
 @media print{
   .site-nav, .footer-inner{display:none}
