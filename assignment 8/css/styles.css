@@ -1,113 +1,37 @@
-<!-- FILE: css/styles.css -->
-:root{
-  --max-width: 1100px;
-  --accent: #0b6b6b;
-  --muted: #6b6b6b;
-  --bg: #ffffff;
-  --text: #111111;
-  --gap: 1.2rem;
-  --font-stack: 'Public Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+/* Color box for JS */
+.color-box {
+  width: 120px;
+  height: 120px;
+  background: lightgray;
+  margin-top: 1rem;
+  border-radius: 8px;
 }
 
-/* ===== Self-hosted font via external link (not Google/Adobe) ===== */
-@font-face {
-  font-family: 'Inter';
-  src: url('https://github.com/rsms/inter/raw/master/docs/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* NAV TOGGLE */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* Apply font site-wide */
-body {
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: #111111;
-  background: #ffffff;
-  line-height: 1.5;
+/* Mobile nav hidden by default */
+.site-nav {
+  display: none;
+  flex-direction: column;
 }
 
-* {
-  box-sizing: border-box;
+/* Show nav when toggle is active */
+.site-nav.open {
+  display: flex;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.5;
-}
-
-
-.header-inner, .footer-inner{
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:1rem;
-  display:flex; /* Flexbox used for header/footer */
-  align-items:center;
-  justify-content:space-between;
-}
-
-.site-header{border-bottom:1px solid #eee}
-.logo{font-weight:700;text-decoration:none;color:var(--accent)}
-.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
-.site-nav a{color:var(--muted);text-decoration:none}
-.site-nav a:focus, .site-nav a:hover{color:var(--accent);outline:2px dashed transparent}
-
-/* Grid layout for the main pages */
-.page-grid{
-  display:grid;
-  grid-template-columns: 1fr 320px;
-  gap:var(--gap);
-  max-width:var(--max-width);
-  margin:1.5rem auto;
-  padding:0 1rem;
-}
-
-/* Hero */
-.hero{grid-column:1 / -1;display:grid;grid-template-columns: 1fr 420px;align-items:center;gap:var(--gap);}
-.hero-img{width:100%;height:auto;border-radius:8px;display:block}
-.hero-content{padding:1rem}
-.lede{font-size:1.05rem;color:var(--muted)}
-
-/* Multi-column content (satisfies multi-column requirement on each page) */
-.multi-col{
-  column-count:2;
-  column-gap:2rem;
-}
-
-.content{background:#fff;padding:1rem;border-radius:6px}
-.sidebar{background:#fafafa;padding:1rem;border-radius:6px}
-.callout{border-left:4px solid var(--accent);padding-left:0.75rem;margin-top:1rem}
-
-/* Responsive adjustments */
-@media (max-width:900px){
-  .page-grid{grid-template-columns:1fr;}
-  .hero{grid-template-columns:1fr}
-  .multi-col{column-count:1}
-  .header-inner, .footer-inner{padding:0.75rem}
-}
-
-/* Footer */
-.site-footer{border-top:1px solid #eee;margin-top:2rem}
-.footer-links{list-style:none;display:flex;gap:1rem;padding:0;margin:0}
-
-/* Accessibility helpers */
-a:focus{outline:3px solid #ffd54f;outline-offset:3px}
-
-/* Make images responsive so they never overflow */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Simple print style for submission */
-@media print{
-  .site-nav, .footer-inner{display:none}
-  body{color:#000}
+/* Desktop nav always visible */
+@media (min-width: 700px) {
+  .nav-toggle {
+    display: none;
+  }
+  .site-nav {
+    display: flex !important;
+    flex-direction: row;
+  }
 }
