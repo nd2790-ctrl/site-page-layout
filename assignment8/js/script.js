@@ -1,4 +1,4 @@
-// ----------------------------
+// ---------------------------- 
 // DOM QUERIES
 // ----------------------------
 const changeTextBtn = document.getElementById("changeTextBtn");
