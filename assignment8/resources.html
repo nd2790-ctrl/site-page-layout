@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="header-inner">
       <a class="logo" href="index.html">Value-Based Care</a>
 
@@ -20,7 +20,7 @@
         </svg>
       </button>
 
-      <nav class="site-nav" id="siteNav">
+      <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -30,9 +30,9 @@
     </div>
   </header>
 
-  <main class="page-grid">
+  <main class="page-grid" role="main">
     <article class="content">
-      <h1>References & further reading</h1>
+      <h1>References & Further Reading</h1>
 
       <!-- DAY OF THE WEEK MESSAGE -->
       <p id="dayMessage">Today’s message loads here...</p>
@@ -59,15 +59,22 @@
 
     </article>
 
-    <aside class="sidebar">
-      <h3>Download</h3>
+    <aside class="sidebar" aria-labelledby="sidebar-heading">
+      <h3 id="sidebar-heading">Download</h3>
       <p><a href="#">Download site ZIP</a></p>
     </aside>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
-      <p>© Eva Deng</p>
+      <p>© 2025 Eva Deng</p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
