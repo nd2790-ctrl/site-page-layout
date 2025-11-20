@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="header-inner">
       <a class="logo" href="index.html">Value-Based Care</a>
 
@@ -20,7 +20,7 @@
         </svg>
       </button>
 
-      <nav class="site-nav" id="siteNav">
+      <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About</a></li>
@@ -30,9 +30,9 @@
     </div>
   </header>
 
-  <main class="page-grid">
-    <section class="about-hero">
-      <h1>About This Project</h1>
+  <main class="page-grid" role="main">
+    <section class="about-hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">About This Project</h1>
       <p class="byline">Understanding how healthcare can shift from volume to value for more equitable, sustainable care.</p>
 
       <!-- DAY OF THE WEEK MESSAGE -->
@@ -42,14 +42,16 @@
     <article class="content">
       <h2>Purpose</h2>
       <div class="multi-col">
-        <p>The purpose of this website is to introduce the concept of value-based care …</p>
-        <p>In creating this project, I wanted to explore how digital communication can be used …</p>
+        <p>The purpose of this website is to introduce the concept of value-based care — an approach that prioritizes patient outcomes over service volume. It serves as an accessible educational platform for anyone interested in understanding how modern healthcare systems are transitioning toward approaches that reward quality, equity, and efficiency.</p>
+
+        <p>In creating this project, I wanted to explore how digital communication can clarify complex healthcare ideas for a broader audience. The site’s structure allows users to easily navigate from introductory explanations to deeper discussions of value-based care frameworks, policy considerations, and real-world examples that demonstrate the impact of value-driven models on both patients and providers.</p>
       </div>
 
       <h2>Design Approach</h2>
       <div class="multi-col">
-        <p>The design approach focuses on clarity, accessibility, and visual calm …</p>
-        <p>Images are responsive, accompanied by descriptive alt text for inclusivity …</p>
+        <p>The design approach focuses on clarity, accessibility, and visual calm. A minimal colour palette, balanced white space, and readable typography help foreground the content — reflecting the transparency and balance that value-based care strives for in healthcare.</p>
+
+        <p>Images are responsive with descriptive alt text for inclusivity, and the site hierarchy follows semantic structure for assistive technologies. The navigation bar and page layout create a smooth user journey, emphasizing simplicity and clarity.</p>
       </div>
 
       <!-- INTERACTIVE BUTTONS -->
@@ -62,7 +64,7 @@
     </article>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <p>© 2025 Eva Deng — Value-Based Care</p>
       <nav aria-label="Footer navigation">
