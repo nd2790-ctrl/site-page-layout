@@ -108,79 +108,67 @@ function setDayFeature() {
     const today = dayContent[day];
     const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     
-    dayFeature.innerHTML = `
-        <h3>${dayNames[day]} Healthcare Focus</h3>
-        <p><strong>${today.theme}</strong></p>
-        <p>${today.message}</p>
-    `;
+    if (dayFeature) {
+        dayFeature.innerHTML = `
+            <h3>${dayNames[day]} Healthcare Focus</h3>
+            <p><strong>${today.theme}</strong></p>
+            <p>${today.message}</p>
+        `;
+    }
 }
 
 // Mobile Navigation Toggle (Extra Credit)
 function toggleMobileMenu() {
     siteNav.classList.toggle('active');
+    navToggle.classList.toggle('active');
     
     // Update ARIA attributes for accessibility
     const isExpanded = siteNav.classList.contains('active');
     navToggle.setAttribute('aria-expanded', isExpanded);
 }
 
+// Close mobile menu when clicking on a link
+function closeMobileMenu() {
+    siteNav.classList.remove('active');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+}
+
 // Event Listeners
-changeTextBtn.addEventListener('click', updateTextContent);
-colorBtn.addEventListener('click', changeBoxStyle);
-navToggle.addEventListener('click', toggleMobileMenu);
+if (changeTextBtn) {
+    changeTextBtn.addEventListener('click', updateTextContent);
+}
+
+if (colorBtn) {
+    colorBtn.addEventListener('click', changeBoxStyle);
+}
+
+if (navToggle) {
+    navToggle.addEventListener('click', toggleMobileMenu);
+}
+
+// Close mobile menu when clicking on nav links
+document.querySelectorAll('.site-nav a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
 
 // Initialize features when page loads
 document.addEventListener('DOMContentLoaded', function() {
     setDayFeature();
     
+    // Add active class to current page in navigation
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.site-nav a').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+    
     // Add initial styles for interactive elements
-    colorBox.style.height = '100px';
-    colorBox.style.margin = '1rem 0';
-    colorBox.style.border = '2px dashed #ccc';
-    colorBox.style.transition = 'all 0.3s ease';
+    if (colorBox) {
+        colorBox.style.height = '100px';
+        colorBox.style.margin = '1rem 0';
+        colorBox.style.border = '2px dashed #ccc';
+        colorBox.style.transition = 'all 0.3s ease';
+    }
 });
-
-// Add responsive navigation styles dynamically
-const style = document.createElement('style');
-style.textContent = `
-    @media (max-width: 768px) {
-        .site-nav ul {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: #2c5aa0;
-            padding: 1rem;
-        }
-        
-        .site-nav.active ul {
-            display: flex;
-        }
-        
-        .nav-toggle {
-            display: block;
-        }
-        
-        .site-nav li {
-            margin: 0.5rem 0;
-        }
-    }
-    
-    /* Day-specific styles */
-    .monday .day-feature { background: #e3f2fd; border-left: 4px solid #2196F3; }
-    .tuesday .day-feature { background: #e8f5e8; border-left: 4px solid #4CAF50; }
-    .wednesday .day-feature { background: #fff3e0; border-left: 4px solid #FF9800; }
-    .thursday .day-feature { background: #f3e5f5; border-left: 4px solid #9C27B0; }
-    .friday .day-feature { background: #e0f2f1; border-left: 4px solid #009688; }
-    .saturday .day-feature { background: #fff8e1; border-left: 4px solid #FFC107; }
-    .sunday .day-feature { background: #fce4ec; border-left: 4px solid #E91E63; }
-    
-    .day-feature {
-        padding: 1rem;
-        margin: 1rem 0;
-        border-radius: 0 8px 8px 0;
-    }
-`;
-document.head.appendChild(style);
