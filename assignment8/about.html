@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
-<head> 
+<html lang="en"> 
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About — Value-Based Care</title> 
-  <link rel="stylesheet" href="./css/styles.css"> 
+  <title>About - Value-Based Care</title>
+  <meta name="description" content="Learn about value-based care approaches and our mission.">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <header class="site-header" role="banner">
     <div class="header-inner">
       <a class="logo" href="./index.html">Value-Based Care</a>
 
-      <!-- Mobile nav toggle -->
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <svg width="32" height="32" viewBox="0 0 100 80">
           <rect width="100" height="12"></rect>
@@ -20,7 +20,7 @@
         </svg>
       </button>
 
-      <nav class="site-nav" id="siteNav" role="navigation" aria-label="Main navigation">
+      <nav class="site-nav" role="navigation" aria-label="Main navigation" id="siteNav">
         <ul>
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html" class="active">About</a></li>
@@ -30,50 +30,64 @@
     </div>
   </header>
 
-  <main class="page-grid" role="main">
-    <section class="about-hero" aria-labelledby="hero-heading">
-      <h1 id="hero-heading">About This Project</h1>
-      <p class="byline">Understanding how healthcare can shift from volume to value for more equitable, sustainable care.</p>
+  <main class="page-grid" id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content" style="position: relative; background: #2c5aa0;">
+        <h1 id="hero-heading">About Value-Based Care</h1>
+        <p class="lede">Understanding the principles and people behind healthcare transformation.</p>
 
-      <!-- DAY OF THE WEEK MESSAGE -->
-      <p id="dayMessage">Today’s message loads here...</p>
+        <!-- DAY OF THE WEEK MESSAGE -->
+        <div id="dayFeature" class="day-feature">
+          <p id="dayMessage">Today's message loads here...</p>
+        </div>
+      </div>
     </section>
 
-    <article class="content">
-      <h2>Purpose</h2>
-      <div class="multi-col">
-        <p>The purpose of this website is to introduce the concept of value-based care — an approach that prioritizes patient outcomes over service volume. It serves as an accessible educational platform for anyone interested in understanding how modern healthcare systems are transitioning toward approaches that reward quality, equity, and efficiency.</p>
+    <article class="content" aria-labelledby="article-heading">
+      <h2 id="article-heading">Our Mission & Approach</h2>
+      
+      <p>Value-based care represents a fundamental shift in how we think about healthcare delivery. Instead of focusing on the quantity of services provided, we prioritize the quality and outcomes of care delivered to patients.</p>
 
-        <p>In creating this project, I wanted to explore how digital communication can clarify complex healthcare ideas for a broader audience. The site’s structure allows users to easily navigate from introductory explanations to deeper discussions of value-based care frameworks, policy considerations, and real-world examples that demonstrate the impact of value-driven models on both patients and providers.</p>
+      <h3>Core Principles</h3>
+      <ul>
+        <li><strong>Patient-Centered Care:</strong> Treatments and care plans designed around individual patient needs and preferences</li>
+        <li><strong>Outcome Measurement:</strong> Tracking and optimizing for health outcomes rather than service volume</li>
+        <li><strong>Prevention Focus:</strong> Emphasizing preventive care to reduce the need for expensive interventions</li>
+        <li><strong>Care Coordination:</strong> Seamless collaboration between healthcare providers</li>
+        <li><strong>Cost Transparency:</strong> Clear understanding of healthcare costs and value</li>
+      </ul>
+
+      <div class="interactive-section">
+        <button id="changeTextBtn" class="interactive-btn">Learn More Facts</button>
+        <p id="textTarget">Click the button to discover more about value-based care principles.</p>
+
+        <button id="colorBtn" class="interactive-btn">Visualize Impact</button>
+        <div id="colorBox" class="color-box"></div>
       </div>
-
-      <h2>Design Approach</h2>
-      <div class="multi-col">
-        <p>The design approach focuses on clarity, accessibility, and visual calm. A minimal colour palette, balanced white space, and readable typography help foreground the content — reflecting the transparency and balance that value-based care strives for in healthcare.</p>
-
-        <p>Images are responsive with descriptive alt text for inclusivity, and the site hierarchy follows semantic structure for assistive technologies. The navigation bar and page layout create a smooth user journey, emphasizing simplicity and clarity.</p>
-      </div>
-
-      <!-- INTERACTIVE BUTTONS -->
-      <button id="changeTextBtn">Change the Text</button>
-      <p id="textTarget">Click the button above to change this text.</p>
-
-      <button id="colorBtn">Change Box Color</button>
-      <div id="colorBox" class="color-box"></div>
-
     </article>
+
+    <aside class="sidebar" aria-labelledby="sidebar-heading">
+      <h3 id="sidebar-heading">Our Team</h3>
+      
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-avatar">ED</div>
+          <h4>Eva Deng</h4>
+          <p>Healthcare Policy Researcher</p>
+          <p>Specializing in value-based care models and international healthcare systems.</p>
+        </div>
+      </div>
+
+      <div class="callout" role="note">
+        <h4>Get Involved</h4>
+        <p>Join the conversation about healthcare transformation and value-based care implementation.</p>
+      </div>
+    </aside>
   </main>
 
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
-      <p>© 2025 Eva Deng — Value-Based Care</p>
-      <nav aria-label="Footer navigation">
-        <ul class="footer-links">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./resources.html">Resources</a></li>
-        </ul>
-      </nav>
+      <p>© Eva Deng — Value-Based Care</p>
     </div>
   </footer>
 
